@@ -21,13 +21,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   =    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Del    |   Q  |   W  |   J  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   \    |
+ * | Del    |   Q  |   W  |   J  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |  P   |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   N  |   E  |   L  |;     |'       |
+ * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   N  |   E  |   L  |  ;   |'       |
  * |--------+------+------+------+------+------|  [   |           |  ]   |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |/     | RShift |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   K  |   ,  |   .  |/     | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv   |  '"  |AltShf| Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
+ *   |Grv   |  :   |AltShf| Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Ctrl | Alt  |       | Alt  |Ctrl/Esc|
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_DEL,          KC_Q,        KC_W,          KC_J,    KC_R,    KC_T,    TG(SYMB),
   KC_LCTL,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,
   KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    KC_LBRC,
-  KC_GRV, KC_QUOT,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,
+  KC_GRV, KC_COLON,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,
                                                            KC_LCTL, KC_LALT,
                                                                           KC_LGUI,
                                                          KC_SPC, KC_BSPC, KC_DEL,
