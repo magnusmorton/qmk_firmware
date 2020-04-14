@@ -12,7 +12,9 @@ enum custom_keycodes {
   EPRM = SAFE_RANGE,
 #endif
   VRSN,
-  RGB_SLD
+  RGB_SLD,
+  RCKT
+
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -21,10 +23,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   =    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Del    |   Q  |   W  |   J  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |  P   |   \    |
+ * | BS     |   Q  |   W  |   F  |   J  |   G  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |  P   |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   N  |   E  |   L  |  ;   |'       |
- * |--------+------+------+------+------+------|  [   |           |  ]   |------+------+------+------+------+--------|
+ * | Ctrl   |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   L  |  ;   |'       |
+ * |--------+------+------+------+------+------|  ->  |           |  ]   |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   K  |   ,  |   .  |/     | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |Grv   |  :   |AltShf| Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
@@ -40,9 +42,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(
   // left hand
   KC_EQL,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,
-  KC_DEL,          KC_Q,        KC_W,          KC_J,    KC_R,    KC_T,    TG(SYMB),
-  KC_LCTL,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,
-  KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    KC_LBRC,
+  KC_BSPC,          KC_Q,        KC_W,          KC_F,    KC_J,    KC_G,    TG(SYMB),
+  KC_LCTL,         KC_A,        KC_R,          KC_S,    KC_T,    KC_D,
+  KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    RCKT,
   KC_GRV, KC_COLON,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,
                                                            KC_LCTL, KC_LALT,
                                                                           KC_LGUI,
@@ -155,6 +157,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         rgblight_mode(1);
         return false;
       #endif
+      case RCKT:
+        SEND_STRING ("->");
+        return false;
     }
   }
   return true;
