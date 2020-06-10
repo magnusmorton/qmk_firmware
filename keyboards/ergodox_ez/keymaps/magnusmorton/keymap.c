@@ -28,16 +28,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |  O   |'       |
  * |--------+------+------+------+------+------|  ->  |           |  ]   |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   K  |   ,  |   .  |/     | RShift |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |/     | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |Grv   |  :   |AltShf| Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Ctrl | Alt  |       | Alt  |Ctrl/Esc|
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | LGui |       | PgUp |        |      |
+ *                                 |      |      | Del  |       | PgUp |        |      |
  *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
- *                                 |      |ace   | Del  |       | PgDn |        |      |
+ *                                 |      |ace   | Win  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
  */
 [BASE] = LAYOUT_ergodox(
@@ -48,8 +48,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    RCKT,
   KC_GRV, KC_COLON,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,
                                                            KC_LCTL, KC_LALT,
-                                                                          KC_LGUI,
-                                                         KC_SPC, KC_BSPC, KC_DEL,
+                                                                          KC_DEL,
+                                                         KC_SPC, KC_BSPC, KC_LGUI,
   // right hand
   KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,              KC_0,           KC_MINS,
   TG(SYMB),     KC_J,    KC_L,    KC_U,    KC_Y,              KC_SCLN,           KC_BSLS,
