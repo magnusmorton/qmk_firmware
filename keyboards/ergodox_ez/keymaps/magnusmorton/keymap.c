@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
+#include keymap_uk.h
 
 #define QWR 0 // default layer
 #define SYMB 1 // symbols
@@ -18,47 +19,7 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-/* Keymap 0: Basic layer
- *
- * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   =    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
- * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | BS     |   Q  |   W  |   F  |   P  |   G  |  L1  |           |  L1  |   J  |   L  |   U  |   Y  |  ;   |   \    |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | Ctrl   |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |  O   |'       |
- * |--------+------+------+------+------+------|  ->  |           |  ]   |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |/     | RShift |
- * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv   |  :   |AltShf| Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
- *   `----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,-------------.
- *                                        | Ctrl | Alt  |       | Alt  |Ctrl/Esc|
- *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Del  |       | PgUp |        |      |
- *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
- *                                 |      |ace   | Win  |       | PgDn |        |      |
- *                                 `--------------------'       `----------------------'
- */
-//[BASE] = LAYOUT_ergodox(
-//  // left hand
-//  KC_EQL,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,
-//  KC_BSPC,          KC_Q,        KC_W,          KC_F,    KC_P,    KC_G,    TG(SYMB),
-//  KC_LCTL,         KC_A,        KC_R,          KC_S,    KC_T,    KC_D,
-//  KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    RCKT,
-//  KC_GRV, KC_COLON,     LALT(KC_LSFT), KC_LEFT, KC_RGHT,
-//                                                           KC_LCTL, KC_LALT,
-//                                                                          KC_DEL,
-//                                                         KC_SPC, KC_BSPC, KC_LGUI,
-//  // right hand
-//  KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,              KC_0,           KC_MINS,
-//  TG(SYMB),     KC_J,    KC_L,    KC_U,    KC_Y,              KC_SCLN,           KC_BSLS,
-//  KC_H,         KC_N,    KC_E,    KC_I,    KC_O,           KC_QUOT,
-//  KC_RBRC,      KC_K,    KC_M,    KC_COMM, KC_DOT,            LT(SYMB,KC_SLSH),        KC_RSFT,
-//  KC_UP,        KC_DOWN, KC_LBRC, KC_RBRC, TT(SYMB),
-//  KC_LALT, CTL_T(KC_ESC),
-//  KC_PGUP,
-//  KC_PGDN, KC_TAB, KC_ENT
-//),
+
 /* Keymap 0: QWERTY
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
