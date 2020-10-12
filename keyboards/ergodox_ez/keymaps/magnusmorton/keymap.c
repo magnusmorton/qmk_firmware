@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
-#include keymap_uk.h
+#include "keymap_uk.h"
 
 #define QWR 0 // default layer
 #define SYMB 1 // symbols
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | Home | End  |       | PrtScr|RAlt  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Del  |       | PgUp |        |      |
- *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
+ *                                 | Space|Backsp|------|       |------|  LALT  |Enter |
  *                                 |      |ace   | Ins  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_UP,        KC_DOWN, KC_LEFT, KC_RIGHT, TT(SYMB),
   KC_PSCREEN,  KC_RALT,
   KC_PGUP,
-  KC_PGDN, KC_TAB, KC_ENT
+  KC_PGDN, KC_LALT, KC_ENT
 ),
 /* Keymap 1: Symbol Layer
  *
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS, KC_AMPR, KC_1,    KC_2,    KC_3,    KC_BSLS, KC_TRNS,
   KC_TRNS, KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
   RGB_TOG, RGB_SLD,
-  KC_TRNS,
-  KC_TRNS, RGB_HUD, RGB_HUI
+  KC_VOLU,
+  KC_VOLD, RGB_HUD, RGB_HUI
 ),
 /* Keymap 2: Media and mouse keys
  *
