@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | Home | End  |       | PrtScr|RAlt  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Del  |       | PgUp |        |      |
- *                                 | Space| BSpc |------|       |------|  Esc   |Enter |
+ *                                 | Space| Ctl  |------|       |------|  Ctl   |Enter |
  *                                 |      |      | lalt |       | lalt |        |      |
  *                                 `--------------------'       `----------------------'
  */
@@ -46,12 +46,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // left hand
   KC_ESC,          KC_1,        UK_2,          KC_3,    KC_4,    KC_5,    KC_EQL,
   KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(SYMB),
-  KC_LCTL,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,
+  KC_BSPC,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,
   KC_LSFT,         KC_Z,        KC_X,          KC_C,    KC_V,    KC_B,    KC_LBRC,
   KC_LGUI,         UK_GRV,      KC_LALT, KC_LEFT, KC_RGHT,
                                                            KC_HOME, KC_END,
                                                                           KC_DEL,
-                                                         KC_SPC, KC_BSPC, KC_LALT,
+                                                         KC_SPC, KC_LCTL, KC_LALT,
   // right hand
   KC_MINS,      KC_6,    KC_7,    KC_8,    KC_9,              KC_0,           UK_HASH,
   TG(SYMB),     KC_Y,    KC_U,    KC_I,    KC_O,              KC_P,           UK_BSLS,
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_UP,        KC_DOWN, KC_LEFT, KC_RIGHT, TT(SYMB),
   KC_PSCREEN,  KC_RALT,
   KC_PGUP,
-  KC_LALT, KC_ESC, KC_ENT
+  KC_LALT, KC_LCTL, KC_ENT
 ),
 /* Keymap 1: Symbol Layer
  *
